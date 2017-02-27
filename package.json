@@ -1,0 +1,46 @@
+{
+  "name": "webpack-ebsco",
+  "version": "1.0.0",
+  "description": "Javascript development environment",
+  "main": "src/index.js",
+  "scripts": {
+    "src:watch": "babel-watch src/index.js -- --watch",
+    "start": "npm-run-all --parallel lint:watch test:watch src:watch",
+    "test": "mocha \"./src/**/*.spec.js\"",
+    "test:watch": "npm run test -- --watch",
+    "lint": "esw webpack.config.* src --color",
+    "lint:watch": "npm run lint -- --watch",
+    "clean-dist": "rimraf ./dist && mkdir dist",
+    "prebuild": "npm-run-all clean-dist test lint",
+    "build": "babel-node ./build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cHernandezKzn/webpack-EBSCO.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cHernandezKzn/webpack-EBSCO/issues"
+  },
+  "homepage": "https://github.com/cHernandezKzn/webpack-EBSCO#readme",
+  "dependencies": {
+    "babel-cli": "6.16.0",
+    "babel-core": "6.17.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "6.2.5",
+    "babel-preset-latest": "6.16.0",
+    "babel-register": "6.16.3",
+    "babel-watch": "^2.0.5",
+    "chai": "^3.5.0",
+    "chalk": "^1.1.3",
+    "eslint": "3.8.1",
+    "eslint-plugin-import": "2.0.1",
+    "eslint-watch": "2.1.14",
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.15.0"
+  }
+}
