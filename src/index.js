@@ -4,4 +4,4 @@ function testFn() {
 
 module.exports = {
   test: testFn
-};
+};;

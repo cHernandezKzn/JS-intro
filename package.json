@@ -8,11 +8,8 @@
     "start": "npm-run-all --parallel lint:watch test:watch src:watch",
     "test": "mocha \"./src/**/*.spec.js\"",
     "test:watch": "npm run test -- --watch",
-    "lint": "esw webpack.config.* src --color",
+    "lint": "esw  src --color",
     "lint:watch": "npm run lint -- --watch",
-    "clean-dist": "rimraf ./dist && mkdir dist",
-    "prebuild": "npm-run-all clean-dist test lint",
-    "build": "babel-node ./build.js"
   },
   "repository": {
     "type": "git",
@@ -37,8 +34,7 @@
     "eslint": "3.16.1",
     "eslint-watch": "2.1.14",
     "mocha": "^3.2.0",
-    "supertest": "^3.0.0",
-    "webpack": "^1.14.0"
+    "supertest": "^3.0.0"
   },
   "devDependencies": {
     "eslint-config-airbnb": "^14.1.0",
