@@ -9,7 +9,7 @@
     "test": "mocha \"./src/**/*.spec.js\"",
     "test:watch": "npm run test -- --watch",
     "lint": "esw  src --color",
-    "lint:watch": "npm run lint -- --watch",
+    "lint:watch": "npm run lint -- --watch"
   },
   "repository": {
     "type": "git",

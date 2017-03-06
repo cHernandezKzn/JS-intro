@@ -1,9 +1,9 @@
 const expect = require('chai').expect;
 const request = require('supertest');
 
-const SERVER_URL = 'http://didyoumean1-int.epnet.com:8080/';
+const SERVER_URL = 'url/';
 
-describe('http://didyoumean1-int.epnet.com:8080', () => {
+describe('url', () => {
   describe('GET /', () => {
     it('should return a 200 status code', (done) => {
       request(SERVER_URL)
@@ -21,7 +21,7 @@ describe('http://didyoumean1-int.epnet.com:8080', () => {
     });
 
     it('should return response body with a "dym server" title', (done) => {
-      const header = "dym Server";
+      const header = 'dym Server';
 
       request(SERVER_URL)
         .get('/')
